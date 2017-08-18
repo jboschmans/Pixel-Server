@@ -1,6 +1,7 @@
 var mongo = require('mongodb').MongoClient;
 var app = require('express')();
 var cors = require('cors');
+var bodyParser = require('body-parser');
 var url = "mongodb://jorisboschmans:ITrules4565@ds029635.mlab.com:29635/jorisboschmans-mydb";
 var col = "pixelserver";
 
