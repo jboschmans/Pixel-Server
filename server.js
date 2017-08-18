@@ -4,15 +4,17 @@ var cors = require('cors');
 var url = "mongodb://jorisboschmans:ITrules4565@ds029635.mlab.com:29635/jorisboschmans-mydb";
 var col = "pixelserver";
 
-app.use(function (req, res, next) {
-    //res.setHeader('Access-Control-Allow-Origin', 'http://findateacher.atwebpages.com');
+/*app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://findateacher.atwebpages.com');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
-});
+});*/
 
-// app.use(cors());
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/', function(req, res){
@@ -26,7 +28,7 @@ app.post('/save', function(req, res){
    // var dataLine = req.body.dataline;
     res.send({
         'response' : req.body,
-        'params' : req.params
+        'params' : req.body
     });
     /*mongo.connect(url, function (err, db){
         if (err) throw err;

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jboschmans/Pixel-Server#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "express": "^4.15.4",
     "mongodb": "^2.2.31",
