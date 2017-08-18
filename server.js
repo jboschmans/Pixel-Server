@@ -19,9 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/', function(req, res){
-    res.send({
-        'response' : 'true'
-    });
+    var htmlString = "<h1>Titel</h1><p>paragraaf</p>";
+    res.send(htmlString);
 });
 
 
