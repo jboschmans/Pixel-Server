@@ -1,0 +1,25 @@
+{
+  "name": "pixel-server",
+  "version": "1.0.0",
+  "description": "The server used to recieve data from the PixelDraw Android app, and display the data in HTML.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jboschmans/Pixel-Server.git"
+  },
+  "author": "Joris Boschmans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jboschmans/Pixel-Server/issues"
+  },
+  "homepage": "https://github.com/jboschmans/Pixel-Server#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "request": "^2.81.0"
+  }
+}
