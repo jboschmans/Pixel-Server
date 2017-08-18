@@ -25,7 +25,7 @@ app.get('/', function(req, res){
 app.post('/save', function(req, res){
     var dataLine = req.body.dataline;
     res.send({
-        'response' : true
+        'response' : 'true'
     });
     mongo.connect(url, function (err, db){
         if (err) throw err;
@@ -36,7 +36,7 @@ app.post('/save', function(req, res){
             }, function(err, result){
                 if (err) throw err;
                 res.send({
-                    'response' : true
+                    'response' : 'true'
                 });
             });
         });
