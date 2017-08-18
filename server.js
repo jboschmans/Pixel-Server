@@ -26,12 +26,8 @@ app.get('/', function(req, res){
 
 
 app.post('/save', function(req, res){
-   // var dataLine = req.body.dataline;
-    res.send({
-        'response' : req.body,
-        'params' : req.body
-    });
-    /*mongo.connect(url, function (err, db){
+    var dataLine = req.body.dataline;
+    mongo.connect(url, function (err, db){
         if (err) throw err;
         db.collection(col).deleteMany({}, function (err, result){
             if (err) throw err;
@@ -44,7 +40,7 @@ app.post('/save', function(req, res){
                 });
             });
         });
-    });*/
+    });
 });
 
 
