@@ -15,6 +15,13 @@ var col = "pixelserver";
 app.use(cors());
 
 
+app.get('/', function(req, res){
+    res.send({
+        'response' : 'true'
+    });
+});
+
+
 app.post('/save', function(req, res){
     var dataLine = req.body.dataline;
     res.send({
