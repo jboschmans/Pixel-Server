@@ -19,8 +19,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/', function(req, res){
-    var htmlString = "<h1>Titel</h1><p>paragraaf</p>";
-    res.send(htmlString);
+    mongo.connect(url, function(err, db){
+        if (err) throw err;
+        db.collection(col).findOne({}, function(err, result){
+            if (err) throw err;
+            var data = result.dataLine;
+            var htmlString = "<!DOCTYPE html>" +
+                "<html>" +
+                "<body>" +
+                "<h1>Pixel Draw</h1>";
+
+            htmlString += data;
+
+            htmlString += "</body></html>";
+            res.send(htmlString);
+        });
+    });
 });
 
 
