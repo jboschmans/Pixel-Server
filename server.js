@@ -27,7 +27,7 @@ app.post('/save', function(req, res){
     res.send({
         'response' : 'true'
     });
-    mongo.connect(url, function (err, db){
+    /*mongo.connect(url, function (err, db){
         if (err) throw err;
         db.collection(col).deleteMany({}, function (err, result){
             if (err) throw err;
@@ -40,7 +40,7 @@ app.post('/save', function(req, res){
                 });
             });
         });
-    });
+    });*/
 });
 
 
