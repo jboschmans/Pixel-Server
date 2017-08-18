@@ -28,10 +28,10 @@ app.get('/', function(req, res){
                 "<html>" +
                 "<body>" +
                 "<h1>Pixel Draw</h1>" +
-                "<div style='display: flex; width: 160px; flex-wrap: wrap;'> ";
+                "<div style='display: flex; width: 320px; flex-wrap: wrap;'> ";
 
             for (var i = 0; i < 64; i++){
-                htmlString += "<div style='width:50px;height:50px;background-color:"
+                htmlString += "<div style='width:40px;height:40px;background-color:"
                 + ((data.charAt(i) == "1") ? "black" : "white")
                 + ";'></div>"
             }
