@@ -23,9 +23,9 @@ app.get('/', function(req, res){
 
 
 app.post('/save', function(req, res){
-    var dataLine = req.body.dataline;
+   // var dataLine = req.body.dataline;
     res.send({
-        'response' : 'true'
+        'response' : JSON.stringify(req)
     });
     /*mongo.connect(url, function (err, db){
         if (err) throw err;
