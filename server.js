@@ -17,6 +17,9 @@ app.use(cors());
 
 app.post('/save', function(req, res){
     var dataLine = req.body.dataline;
+    res.send({
+        'response' : true
+    });
     mongo.connect(url, function (err, db){
         if (err) throw err;
         db.collection(col).deleteMany({}, function (err, result){
